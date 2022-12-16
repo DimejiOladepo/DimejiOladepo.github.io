@@ -96,20 +96,41 @@
 						<h2>Get In Touch</h2>
 					</header>
 						<p>If you're interested in working together, kindly send me a message through the form below and I'll get your message. You can also reach out using any of my social links if you want to say hello &#128075;.</p>
+						<!-- <script
+							src="https://code.jquery.com/jquery-3.4.1.js"
+							integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+							crossorigin="anonymous"></script>
+							<script>
+							function SubForm (){
+								$.ajax({
+									url:"https://script.google.com/macros/s/AKfycbxLE4-r1hNrjm6aD3hvju9XSXBiCm17fXW_WUlQ4SGvx-Ymu4oHxS2CbsOngNvn5Lk/exec",
+									type:"POST",
+									data:$("#myForm").serializeArray(),
+									success: function(){
+									alert("Form Data Submitted :)")
+									},
+									error: function(){
+									alert("There was an error :(")
+									}
+								})
+								console.log($("#myForm").serializeArray());
+							}
+							</script> -->
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="https://script.google.com/macros/s/AKfycbxLE4-r1hNrjm6aD3hvju9XSXBiCm17fXW_WUlQ4SGvx-Ymu4oHxS2CbsOngNvn5Lk/exec">
+									<form id="myForm"> 
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
 										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
 									</div>
-								</form>
+								
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" id="btnSubmit" value="Send Message" /></li>
 								</ul>
-							
+							</form>
 							</div>
+							<script type="module" src="assets/js/app.js"></script>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
 									<li>
