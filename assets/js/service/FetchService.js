@@ -28,7 +28,6 @@ export default class FetchService {
         }
         try {
             const rawResponse = await fetch(fetchLink, {
-                redirect: "follow",
                 method: "POST",
                 headers: headers,
                 body: JSON.stringify(body)
