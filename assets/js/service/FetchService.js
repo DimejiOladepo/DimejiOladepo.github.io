@@ -28,12 +28,13 @@ export default class FetchService {
         }
         try {
             const rawResponse = await fetch(fetchLink, {
+                redirect: "follow",
                 method: "POST",
                 headers: headers,
                 body: JSON.stringify(body)
             });
-            const content = await rawResponse.json();
-            return content;
+            // const content = await rawResponse.json();
+            return rawResponse;
         }
         catch(err) {
             console.error(`Error at fetch POST: ${err}`);

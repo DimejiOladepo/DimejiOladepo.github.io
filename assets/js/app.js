@@ -84,15 +84,14 @@ async function submitForm(e, form) {
     console.log(response);
     // 2.5 Inform user of result
     if(response)
-        window.location = `/success.html?Name=${response.name}&Email=${response.email}&Message=${response.message}`;
+        window.location = `/index.html`;
     else
         alert(`An error occured.`);
 }
 
 function buildHeaders(authorization = null) {
     const headers = {
-        "Content-Type": "application/json",
-        "Authorization": (authorization) ? authorization : "Bearer TOKEN_MISSING"
+        "Content-Type": "text/plain"
     };
     return headers;
 }
